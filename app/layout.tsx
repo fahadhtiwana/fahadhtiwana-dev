@@ -42,6 +42,15 @@ export const metadata: Metadata = {
   authors: [{ name: "Malik Fahad Hayat", url: "https://github.com/fahadhtiwana" }],
   creator: "Malik Fahad Hayat",
   publisher: "Malik Fahad Hayat",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    other: [{ rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#000000" }],
+  },
   robots: {
     index: true,
     follow: true,
@@ -59,7 +68,7 @@ export const metadata: Metadata = {
     url: "https://fahadhtiwana.vercel.app",
     title: "Malik Fahad Hayat - Computer Science Student & Developer Portfolio",
     description:
-      "Grade 12 Computer Science student from Pakistan passionate about Java, algorithms, and meaningful tech impact. Connect with fahadhtiwana on GitHub.",
+      "Grade 12 Computer Science student from Pakistan passionate about Java, algorithms, and tech impact. Connect with fahadhtiwana on GitHub.",
     siteName: "Malik Fahad Hayat Portfolio",
     images: [
       {
