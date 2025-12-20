@@ -123,7 +123,7 @@ export default function RootLayout({
                 "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B612_20250811_111051_215.jpg-RfzRKYiyEiHpSFZOrG7CeUloynXVYB.jpeg",
               sameAs: [
                 "https://github.com/fahadhtiwana",
-                "https://www.linkedin.com/in/malik-fahad-hayat-t-1b880031a/",
+                "https://www.linkedin.com/in/malik-fahad-hayat/",
                 "mailto:fahadhayattiwana@gmail.com",
               ],
               jobTitle: "Computer Science Student",
