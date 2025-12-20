@@ -143,7 +143,7 @@ export default function Portfolio() {
             </Button>
             <Button variant="outline" size="lg" className="flex items-center gap-2 bg-transparent" asChild>
               <a
-                href="https://www.linkedin.com/in/malik-fahad-hayat-t-1b880031a/"
+                href="https://www.linkedin.com/in/malik-fahad-hayat/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
