@@ -13,8 +13,8 @@
     "react-dom": "^18.2.0",
     "framer-motion": "^11.0.0",
     "@vercel/analytics": "^1.0.0",
-    "lucide-react": "latest",
-    "@tailwindcss/postcss": "latest"
+    "lucide-react": "^0.400.0",
+    "@tailwindcss/postcss": "^4.0.0"
   },
   "devDependencies": {
     "typescript": "^5",
