@@ -12,7 +12,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "framer-motion": "^11.0.0",
-    "@vercel/analytics": "^1.0.0"
+    "@vercel/analytics": "^1.0.0",
+    "lucide-react": "latest",
+    "@tailwindcss/postcss": "latest"
   },
   "devDependencies": {
     "typescript": "^5",
