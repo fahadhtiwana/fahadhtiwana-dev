@@ -184,19 +184,42 @@
 }
 
 /* ===========================
-   Skill shimmer effect
+   Skill card animations
    =========================== */
-.skill-shimmer {
-  animation: shimmer 2s infinite linear;
-  background-size: 200% 100%;
+
+/* Gentle floating animation for skill icons */
+.skill-float {
+  animation: skillFloat 3s ease-in-out infinite;
 }
 
-@keyframes shimmer {
+@keyframes skillFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Rotating gradient border effect on hover */
+.skill-card {
+  --border-angle: 0deg;
+}
+
+.skill-border-spin {
+  transition: opacity 0.5s ease;
+}
+
+.skill-card:hover .skill-border-spin {
+  animation: borderSpin 3s linear infinite;
+}
+
+@keyframes borderSpin {
   0% {
-    transform: translateX(-100%);
+    filter: hue-rotate(0deg);
   }
   100% {
-    transform: translateX(100%);
+    filter: hue-rotate(360deg);
   }
 }
 

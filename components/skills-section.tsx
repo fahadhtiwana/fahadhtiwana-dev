@@ -5,46 +5,83 @@ import { AnimatedSection } from "@/components/animated-section"
 
 interface Skill {
   name: string
-  level: number
-  color: string
+  icon: string
+  gradient: string
+  glow: string
 }
 
 const skills: Skill[] = [
-  { name: "Java", level: 55, color: "from-orange-500 to-red-500" },
-  { name: "Python", level: 40, color: "from-green-400 to-emerald-500" },
-  { name: "Web Development", level: 45, color: "from-blue-400 to-violet-500" },
-  { name: "Algorithms & DSA", level: 50, color: "from-yellow-400 to-orange-500" },
-  { name: "Problem Solving", level: 60, color: "from-pink-400 to-rose-500" },
+  { name: "Java", icon: "☕", gradient: "from-orange-500 via-red-500 to-amber-500", glow: "hover:shadow-orange-500/30" },
+  { name: "Python", icon: "🐍", gradient: "from-green-400 via-emerald-500 to-teal-500", glow: "hover:shadow-green-500/30" },
+  { name: "Web Development", icon: "🌐", gradient: "from-blue-400 via-violet-500 to-indigo-500", glow: "hover:shadow-blue-500/30" },
+  { name: "Algorithms & DSA", icon: "🧩", gradient: "from-yellow-400 via-orange-500 to-red-400", glow: "hover:shadow-yellow-500/30" },
+  { name: "Problem Solving", icon: "💡", gradient: "from-pink-400 via-rose-500 to-fuchsia-500", glow: "hover:shadow-pink-500/30" },
+  { name: "Git & GitHub", icon: "🔀", gradient: "from-gray-400 via-slate-500 to-zinc-400", glow: "hover:shadow-gray-500/30" },
+  { name: "Data Structures", icon: "🏗️", gradient: "from-cyan-400 via-sky-500 to-blue-500", glow: "hover:shadow-cyan-500/30" },
+  { name: "OOP", icon: "⚙️", gradient: "from-purple-400 via-violet-500 to-indigo-400", glow: "hover:shadow-purple-500/30" },
 ]
 
-function SkillBar({ skill, index }: { skill: Skill; index: number }) {
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.2,
+    },
+  },
+}
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40, scale: 0.85, rotateX: 15 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    rotateX: 0,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      damping: 14,
+    },
+  },
+}
+
+function SkillCard({ skill, index }: { skill: Skill; index: number }) {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -30 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="space-y-2"
+      variants={cardVariants}
+      whileHover={{
+        scale: 1.08,
+        y: -8,
+        transition: { type: "spring", stiffness: 300, damping: 15 },
+      }}
+      whileTap={{ scale: 0.97 }}
+      className={`skill-card group relative cursor-default rounded-2xl p-[1.5px] ${skill.glow} hover:shadow-2xl transition-shadow duration-500`}
     >
-      <div className="flex justify-between items-center">
-        <span className="text-sm font-semibold text-foreground">{skill.name}</span>
-        <span className="text-xs text-muted-foreground font-medium">{skill.level}%</span>
-      </div>
-      <div className="h-2.5 w-full bg-muted rounded-full overflow-hidden">
-        <motion.div
-          className={`h-full rounded-full bg-gradient-to-r ${skill.color} relative`}
-          initial={{ width: 0 }}
-          whileInView={{ width: `${skill.level}%` }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 1.2,
-            delay: 0.3 + index * 0.1,
-            ease: [0.21, 0.47, 0.32, 0.98],
-          }}
+      {/* Animated gradient border */}
+      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${skill.gradient} opacity-60 group-hover:opacity-100 transition-opacity duration-500 skill-border-spin`} />
+
+      {/* Inner card with glassmorphism */}
+      <div className="relative rounded-2xl bg-background/90 dark:bg-background/80 backdrop-blur-xl px-6 py-5 flex flex-col items-center gap-3 overflow-hidden">
+        {/* Floating background glow */}
+        <div className={`absolute -top-6 -right-6 w-20 h-20 rounded-full bg-gradient-to-br ${skill.gradient} opacity-0 group-hover:opacity-20 blur-2xl transition-opacity duration-700`} />
+
+        {/* Icon with float animation */}
+        <motion.span
+          className="text-3xl relative z-10 skill-float"
+          style={{ animationDelay: `${index * 0.3}s` }}
         >
-          {/* Shimmer effect */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent skill-shimmer" />
-        </motion.div>
+          {skill.icon}
+        </motion.span>
+
+        {/* Skill name */}
+        <span className="text-sm font-semibold text-foreground relative z-10 text-center leading-tight">
+          {skill.name}
+        </span>
+
+        {/* Animated underline on hover */}
+        <div className={`h-0.5 w-0 group-hover:w-3/4 bg-gradient-to-r ${skill.gradient} rounded-full transition-all duration-500 ease-out`} />
       </div>
     </motion.div>
   )
@@ -52,24 +89,28 @@ function SkillBar({ skill, index }: { skill: Skill; index: number }) {
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-20 px-6 bg-muted/30">
+    <section id="skills" className="py-20 px-6 bg-muted/30 overflow-hidden">
       <div className="max-w-4xl mx-auto">
         <AnimatedSection>
           <h2 className="font-sans text-4xl font-bold text-center mb-4 text-balance">
             Skills & Expertise
           </h2>
-          <p className="text-center text-muted-foreground mb-12 text-pretty max-w-xl mx-auto">
-            Currently learning and growing every day. These bars reflect my journey so far.
+          <p className="text-center text-muted-foreground mb-14 text-pretty max-w-xl mx-auto">
+            Currently learning and growing every day. Here are the technologies and concepts I work with.
           </p>
         </AnimatedSection>
 
-        <AnimatedSection delay={0.15}>
-          <div className="grid gap-5 md:grid-cols-2 md:gap-x-12 md:gap-y-6">
-            {skills.map((skill, index) => (
-              <SkillBar key={skill.name} skill={skill} index={index} />
-            ))}
-          </div>
-        </AnimatedSection>
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-5"
+        >
+          {skills.map((skill, index) => (
+            <SkillCard key={skill.name} skill={skill} index={index} />
+          ))}
+        </motion.div>
       </div>
     </section>
   )

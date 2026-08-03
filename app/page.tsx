@@ -343,7 +343,7 @@ export default function Portfolio() {
               <div className="flex items-center gap-4">
                 {[
                   { icon: <Github className="w-5 h-5" />, href: "https://github.com/fahadhtiwana", label: "GitHub" },
-                  { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/in/malik-fahad-hayat-t-1b880031a/", label: "LinkedIn" },
+                  { icon: <Linkedin className="w-5 h-5" />, href: "https://www.linkedin.com/in/malik-fahad-hayat/", label: "LinkedIn" },
                   { icon: <Mail className="w-5 h-5" />, href: "mailto:fahadhayattiwana@gmail.com", label: "Email" }
                 ].map((social) => (
                   <Button key={social.label} variant="ghost" size="icon" className="rounded-full hover:bg-primary/10 hover:text-primary transition-all" asChild>
