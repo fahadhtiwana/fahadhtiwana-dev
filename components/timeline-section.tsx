@@ -6,31 +6,31 @@ import { GraduationCap, Code, Rocket } from "lucide-react"
 
 const timelineItems = [
   {
-    title: "Matriculation",
-    subtitle: "Scored 97%",
-    description: "Achieved a brilliant 97% in Matric, laying the groundwork for a future in technology.",
+    title: "SDSB, LUMS",
+    subtitle: "Accounting & Finance (ACF)",
+    description: "Studying at Suleman Dawood School of Business (SDSB), LUMS, focusing on financial strategy and corporate analytics.",
     icon: <GraduationCap className="w-5 h-5" />,
-    status: "completed" as const,
+    status: "current" as const,
   },
   {
-    title: "FSc Part 1",
-    subtitle: "Scored 91%",
-    description: "Completed FSc Part 1 with outstanding results, building a strong academic foundation.",
-    icon: <GraduationCap className="w-5 h-5" />,
-    status: "completed" as const,
-  },
-  {
-    title: "FSc Part 2",
-    subtitle: "Currently Studying",
-    description: "Preparing for FSc Part 2 and SAT while deepening knowledge in Core Java and algorithms.",
+    title: "Computer Science Minor",
+    subtitle: "Complementary Focus",
+    description: "Pursuing CS courses at LUMS as a complementary skill set to enhance financial and analytical decision-making.",
     icon: <Code className="w-5 h-5" />,
     status: "current" as const,
   },
   {
-    title: "Building Projects",
-    subtitle: "Active on GitHub",
-    description: "Creating real-world projects, contributing to open source, and turning ideas into code.",
+    title: "Self-Taught Web Development",
+    subtitle: "Next.js, TypeScript & JS",
+    description: "Independently built software skills in web development using Next.js, TypeScript, and modern JavaScript frameworks.",
     icon: <Rocket className="w-5 h-5" />,
+    status: "current" as const,
+  },
+  {
+    title: "Finance & Strategy Focus",
+    subtitle: "Core Interest",
+    description: "Dedicated to mastering how financial decisions drive organizations forward and creating strategic value.",
+    icon: <GraduationCap className="w-5 h-5" />,
     status: "current" as const,
   },
 ]

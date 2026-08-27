@@ -91,7 +91,7 @@ export default function Portfolio() {
             </motion.h1>
             <p className="text-xl md:text-3xl text-white/90 mb-6 text-pretty min-h-[2em] font-medium">
               <TypingEffect
-                text="Smart enough to solve, bold enough to build."
+                text="Driven by financial strategy. Powered by technology."
                 speed={45}
                 delay={800}
               />
@@ -102,9 +102,7 @@ export default function Portfolio() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 1.2 }}
             >
-              Grade 12 Computer Science student from Pakistan, passionate about
-              algorithms, problem-solving, and creating meaningful impact
-              through technology.
+              Accounting & Finance (ACF) student at SDSB, LUMS — passionate about financial decision-making and business strategy, backed by self-taught web development in Next.js and TypeScript.
             </motion.p>
           </header>
 
@@ -115,23 +113,23 @@ export default function Portfolio() {
             transition={{ duration: 0.6, delay: 1.5 }}
           >
             <div className="flex flex-col items-center">
-              <span className="text-2xl font-bold text-white tracking-tight">2+</span>
-              <span className="text-[10px] md:text-xs text-white/60 uppercase tracking-widest font-semibold">Projects</span>
+              <span className="text-2xl font-bold text-white tracking-tight">LUMS</span>
+              <span className="text-[10px] md:text-xs text-white/60 uppercase tracking-widest font-semibold">SDSB School</span>
             </div>
             <div className="w-[1px] h-10 bg-white/20" />
             <div className="flex flex-col items-center">
-              <span className="text-2xl font-bold text-white tracking-tight">97%</span>
-              <span className="text-[10px] md:text-xs text-white/60 uppercase tracking-widest font-semibold">Matric</span>
+              <span className="text-2xl font-bold text-white tracking-tight">ACF</span>
+              <span className="text-[10px] md:text-xs text-white/60 uppercase tracking-widest font-semibold">Intended Major</span>
             </div>
             <div className="w-[1px] h-10 bg-white/20" />
             <div className="flex flex-col items-center">
-              <span className="text-2xl font-bold text-white tracking-tight">91%</span>
-              <span className="text-[10px] md:text-xs text-white/60 uppercase tracking-widest font-semibold">FSc Part 1</span>
+              <span className="text-2xl font-bold text-white tracking-tight">CS</span>
+              <span className="text-[10px] md:text-xs text-white/60 uppercase tracking-widest font-semibold">Intended Minor</span>
             </div>
             <div className="w-[1px] h-10 bg-white/20" />
             <div className="flex flex-col items-center">
-              <span className="text-xl md:text-2xl font-bold text-white tracking-tight italic">Java</span>
-              <span className="text-[10px] md:text-xs text-white/60 uppercase tracking-widest font-semibold">Learning</span>
+              <span className="text-xl md:text-2xl font-bold text-white tracking-tight italic">Next.js & TS</span>
+              <span className="text-[10px] md:text-xs text-white/60 uppercase tracking-widest font-semibold">Self-Taught Dev</span>
             </div>
           </motion.div>
 
@@ -183,23 +181,28 @@ export default function Portfolio() {
             <AnimatedSection delay={0.1}>
               <article>
                 <h3 className="text-2xl font-semibold mb-6">
-                  My Journey
+                  My Background & Vision
                 </h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
-                  As a Grade 12 student with a deep passion for Computer
-                  Science, I'm currently building strong fundamentals in Core
-                  Java while preparing for the SAT. My curiosity drives me to
-                  explore algorithms, problem-solving techniques, and
-                  computational thinking.
+                  I’m a business student at LUMS Suleman Dawood School of Business (SDSB), with an intended major in Accounting & Finance (ACF). I’m drawn to the analytical and strategic side of business—understanding how financial decisions drive organizations forward—and I’m building my foundation in this direction through my coursework at LUMS.
                 </p>
-                <p className="text-muted-foreground mb-10 leading-relaxed text-lg">
-                  I believe that technology is not just a tool it's the bridge
-                  to meaningful impact. My vision is to contribute meaningfully
-                  to the global tech ecosystem and create solutions that matter.
+                <p className="text-muted-foreground mb-6 leading-relaxed text-lg">
+                  Alongside my business studies, I’ve picked up computer science skills on my own, including web development with Next.js, TypeScript, and JavaScript. I plan to pursue this further as a minor, using it as a complementary skill set rather than a primary focus, since my core interest lies in finance and business strategy.
+                </p>
+                <p className="text-muted-foreground mb-10 leading-relaxed text-lg font-medium text-foreground/90">
+                  I’m always open to connecting with peers, mentors, and professionals in finance and business.
                 </p>
 
                 <div className="flex flex-wrap gap-3">
-                  {skillBadges.map((skill) => (
+                  {[
+                    "Accounting & Finance",
+                    "Business Strategy",
+                    "Next.js",
+                    "TypeScript",
+                    "JavaScript",
+                    "Financial Analytics",
+                    "Web Development",
+                  ].map((skill) => (
                     <Badge key={skill} variant="secondary" className="px-4 py-1 rounded-full text-sm font-medium border-border/50">
                       {skill}
                     </Badge>
@@ -212,29 +215,29 @@ export default function Portfolio() {
               <Card className="border-border/50 shadow-2xl shadow-black/5 dark:shadow-white/5 overflow-hidden group">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <CardHeader className="pb-4 relative">
-                  <CardTitle className="text-xl">Tech Interests</CardTitle>
+                  <CardTitle className="text-xl">Academic & Technical Focus</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6 relative">
                   <div>
                     <h4 className="font-semibold mb-2 text-foreground/90">
-                      Programming Languages
+                      University & School
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      Core Java (learning), exploring Python & Web Development
+                      LUMS — Suleman Dawood School of Business (SDSB)
                     </p>
                   </div>
                   <div className="h-[1px] bg-border/50" />
                   <div>
-                    <h4 className="font-semibold mb-2 text-foreground/90">Focus Areas</h4>
+                    <h4 className="font-semibold mb-2 text-foreground/90">Primary Focus (Major)</h4>
                     <p className="text-sm text-muted-foreground">
-                      Algorithms, Problem-Solving, Software Development
+                      Accounting & Finance (ACF) • Corporate Strategy & Financial Analytics
                     </p>
                   </div>
                   <div className="h-[1px] bg-border/50" />
                   <div>
-                    <h4 className="font-semibold mb-2 text-foreground/90">Philosophy</h4>
+                    <h4 className="font-semibold mb-2 text-foreground/90">Complementary Skill Set</h4>
                     <p className="text-sm text-muted-foreground">
-                      Always eager to learn, innovate, and grow
+                      Intended CS Minor • Self-taught Web Development (Next.js, TypeScript, JS)
                     </p>
                   </div>
                 </CardContent>

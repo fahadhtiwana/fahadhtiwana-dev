@@ -14,24 +14,25 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Malik Fahad Hayat - Computer Science Student & Developer Portfolio",
+  title: "Malik Fahad Hayat - LUMS SDSB Student | Accounting & Finance (ACF)",
   description:
-    "Malik Fahad Hayat (fahadhtiwana) - Grade 12 Computer Science student from Khushab, Pakistan. Passionate about Java programming, algorithms, problem-solving, and creating meaningful tech impact. View my projects and connect with me.",
+    "Malik Fahad Hayat (fahadhtiwana) - Business student at Suleman Dawood School of Business (SDSB), LUMS, majoring in Accounting & Finance (ACF). Self-taught web developer in Next.js & TypeScript with an intended Minor in Computer Science.",
   keywords: [
     "Malik Fahad Hayat",
     "fahadhtiwana",
     "Malik Fahad Hayat Tiwana",
-    "Computer Science student Pakistan",
-    "Java programmer",
-    "algorithms",
-    "problem solving",
-    "Khushab Pakistan developer",
-    "student developer",
-    "programming portfolio",
+    "LUMS",
+    "SDSB LUMS",
+    "Suleman Dawood School of Business",
+    "Accounting and Finance LUMS",
+    "ACF LUMS",
+    "LUMS CS Minor",
+    "Next.js Developer",
+    "TypeScript Developer",
+    "Pakistani developer",
+    "Business Strategy",
+    "Financial Analytics",
     "GitHub fahadhtiwana",
-    "Pakistani programmer",
-    "SAT preparation",
-    "tech student",
   ],
   authors: [{ name: "Malik Fahad Hayat", url: "https://github.com/fahadhtiwana" }],
   creator: "Malik Fahad Hayat",
@@ -60,24 +61,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://fahadhtiwana.vercel.app",
-    title: "Malik Fahad Hayat - Computer Science Student & Developer Portfolio",
+    title: "Malik Fahad Hayat - LUMS SDSB Student | Accounting & Finance (ACF)",
     description:
-      "Grade 12 Computer Science student from Pakistan passionate about Java, algorithms, and tech impact. Connect with fahadhtiwana on GitHub.",
+      "Business student at SDSB, LUMS focusing on Accounting & Finance (ACF) and financial strategy, backed by self-taught web development in Next.js & TypeScript.",
     siteName: "Malik Fahad Hayat Portfolio",
     images: [
       {
         url: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B612_20250811_111051_215.jpg-RfzRKYiyEiHpSFZOrG7CeUloynXVYB.jpeg",
         width: 1200,
         height: 630,
-        alt: "Malik Fahad Hayat - Computer Science Student",
+        alt: "Malik Fahad Hayat - LUMS SDSB Student",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Malik Fahad Hayat - Computer Science Student & Developer",
+    title: "Malik Fahad Hayat - LUMS SDSB Student & Developer",
     description:
-      "Grade 12 CS student from Pakistan passionate about Java, algorithms, and tech impact. GitHub: fahadhtiwana",
+      "Accounting & Finance (ACF) Student at SDSB LUMS • Intended CS Minor • Self-Taught Web Dev in Next.js & TS.",
     images: [
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B612_20250811_111051_215.jpg-RfzRKYiyEiHpSFZOrG7CeUloynXVYB.jpeg",
     ],
@@ -113,7 +114,7 @@ export default function RootLayout({
               name: "Malik Fahad Hayat",
               alternateName: ["fahadhtiwana", "Malik Fahad Hayat Tiwana"],
               description:
-                "Grade 12 Computer Science student from Khushab, Pakistan, passionate about Java programming, algorithms, and problem-solving",
+                "Business student at Suleman Dawood School of Business (SDSB), LUMS, majoring in Accounting & Finance (ACF) with self-taught web development skills in Next.js & TypeScript.",
               url: "https://fahadhtiwana.vercel.app",
               image:
                 "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B612_20250811_111051_215.jpg-RfzRKYiyEiHpSFZOrG7CeUloynXVYB.jpeg",
@@ -122,26 +123,28 @@ export default function RootLayout({
                 "https://www.linkedin.com/in/malik-fahad-hayat/",
                 "mailto:fahadhayattiwana@gmail.com",
               ],
-              jobTitle: "Computer Science Student",
+              jobTitle: "ACF Student & Developer",
               worksFor: {
                 "@type": "EducationalOrganization",
-                name: "Grade 12 Student",
+                name: "Suleman Dawood School of Business (SDSB), LUMS",
               },
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Khushab",
+                addressLocality: "Lahore",
                 addressCountry: "Pakistan",
               },
               knowsAbout: [
-                "Java Programming",
-                "Algorithms",
-                "Problem Solving",
+                "Accounting & Finance",
+                "Business Strategy",
+                "Next.js",
+                "TypeScript",
+                "JavaScript",
                 "Computer Science",
-                "Software Development",
+                "Financial Analytics",
               ],
               alumniOf: {
                 "@type": "EducationalOrganization",
-                name: "High School Student",
+                name: "LUMS (Lahore University of Management Sciences)",
               },
             }),
           }}
